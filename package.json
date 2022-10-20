@@ -5,12 +5,15 @@
   "dependencies": {
     "@react-three/drei": "^9.36.0",
     "@react-three/fiber": "^8.8.10",
+    "@react-three/postprocessing": "^2.7.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "lamina": "^1.1.23",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-fast-marquee": "^1.3.5",
+    "react-icons": "^4.6.0",
     "react-scripts": "5.0.1",
     "react-spring": "^9.5.5",
     "styled-components": "^5.3.6",
@@ -41,5 +44,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-plugin-glsl": "^1.0.0",
+    "glslify": "^7.1.1"
   }
 }

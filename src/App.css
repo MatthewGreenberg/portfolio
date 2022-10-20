@@ -15,7 +15,7 @@ body,
 body {
   font-size: 13px;
   color: #fefefe;
-  background: black;
+  background: white;
 }
 
 @keyframes fade-in {
@@ -38,6 +38,7 @@ canvas {
   touch-action: none;
   animation: fade-in 2s ease 0.3s forwards;
   animation-delay: 0s;
+  position: fixed;
 }
 
 svg {
@@ -49,7 +50,6 @@ a {
 }
 
 a {
-  pointer-events: all;
   color: white;
   text-decoration: none;
 }
