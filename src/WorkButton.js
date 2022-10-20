@@ -71,7 +71,7 @@ export default function WorkButton() {
 
   return (
     <>
-      <EffectComposer enabled={!isOpen} disableNormalPass={false}>
+      <EffectComposer disableNormalPass={false}>
         <Noise opacity={0.5} />
       </EffectComposer>
       <group
