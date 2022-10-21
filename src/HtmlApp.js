@@ -15,12 +15,14 @@ const HtmlApp = () => {
     opacity: isOpen ? 1 : 0,
     top: isOpen ? 42 : 25,
     delay: isOpen ? 1000 : 0,
+    config: { duration: isOpen ? 250 : 0 },
   });
 
   const aboutProps = useSpring({
     opacity: isOpen ? 1 : 0,
     y: isOpen ? 0 : 25,
     delay: isOpen ? 750 : 0,
+    config: { duration: isOpen ? 250 : 0 },
   });
 
   return (
@@ -159,10 +161,11 @@ const StyledClose = styled(animated.button)`
   transform: scale(1);
   transition: transform 0.25s;
   &:hover {
-    transform: scale(0.8);
+    transform: scale(0.95);
   }
   svg {
     width: 50px;
+    fill: black;
     height: 50px;
   }
 `;

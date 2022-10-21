@@ -7,6 +7,7 @@ const Header = ({ isOpen }) => {
     transform: isOpen
       ? "translate(0, 0) scale(0.75)"
       : "translate(0, 0) scale(1)",
+    color: isOpen ? "white" : "black",
     delay: isOpen ? 250 : 0,
   });
   return (
@@ -19,7 +20,7 @@ const Header = ({ isOpen }) => {
 
 const StyledHeader = styled(animated.header)`
   font-size: 40px;
-  color: white;
+  color: black;
   left: 0;
   top: 0;
   transform-origin: 0 0;

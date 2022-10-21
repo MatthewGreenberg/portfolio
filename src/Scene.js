@@ -4,6 +4,7 @@ import { useFrame } from "@react-three/fiber";
 import WorkButton from "./WorkButton";
 import { useSpring } from "react-spring";
 import useStore from "./useStore";
+import Balls from "./Balls";
 
 const Scene = () => {
   const isOpen = useStore((state) => state.isOpen);
@@ -17,6 +18,7 @@ const Scene = () => {
   return (
     <group ref={groupRef} rotation={[Math.PI / 5, -Math.PI / 3, Math.PI / 2]}>
       <WorkButton />
+      <Balls />
       <gridHelper
         args={[20, 40, "red", "#555555"]}
         position={[0, 0, 0]}
