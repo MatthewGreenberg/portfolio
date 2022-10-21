@@ -89,7 +89,7 @@ export default function WorkButton() {
         position={[1, -0.5, 0.25]}
         ref={groupRef}
       >
-        <pointLight intensity={10} position={[0, 0, 0]} color="pink" />
+        <pointLight intensity={2} position={[0, 0, 0]} color="pink" />
         <mesh
           onClick={() => {
             if (isOpen) return;
