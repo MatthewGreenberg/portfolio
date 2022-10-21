@@ -1,9 +1,10 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { LayerMaterial, Depth, Fresnel } from "lamina";
 import { useFrame } from "@react-three/fiber";
 
 const BoxMaterial = React.memo(() => {
   const ref = useRef();
+  const [ticker, set] = useState(0);
   useFrame((state) => {
     const sin = Math.sin(state.clock.elapsedTime / 2);
     const cos = Math.cos(state.clock.elapsedTime / 2);
@@ -12,6 +13,13 @@ const BoxMaterial = React.memo(() => {
     ref.current.layers[2].origin.set(sin, cos, sin);
     ref.current.layers[3].origin.set(cos, sin, cos);
   });
+  useEffect(() => {
+    const timer = setTimeout(changeTicker, 500);
+    return () => clearTimeout(timer);
+  });
+  function changeTicker() {
+    set(1);
+  }
   return (
     <LayerMaterial ref={ref} toneMapped={false}>
       <Depth

@@ -183,7 +183,6 @@ const ViewWork = styled.div`
   transform: translateX(-50%);
   font-size: 52px;
   padding-top: 10px;
-  border-top: 10px dashed white;
   width: 100%;
   text-align: center;
   h5 {

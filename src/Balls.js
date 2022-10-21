@@ -47,9 +47,9 @@ function Balls() {
       textGradientRef.current.color.g = 0.1;
     }
     ref.current.scale.set(
-      hoverFactor * 1.5,
-      hoverFactor * 1.5,
-      hoverFactor * 1.5
+      Math.max(hoverFactor, 0.5) * 1.75,
+      Math.max(hoverFactor, 0.5) * 1.75,
+      Math.max(hoverFactor, 0.5) * 1.75
     );
   });
   return (

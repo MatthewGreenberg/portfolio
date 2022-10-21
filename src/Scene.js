@@ -26,10 +26,10 @@ const Scene = () => {
       />
       <mesh position={[-0.5, 0, 0]} rotation={[0, Math.PI / 2, Math.PI]}>
         <planeGeometry args={[25, 25, 10, 10]} />
-        <meshBasicMaterial wireframe={true}>
+        <meshBasicMaterial>
           <GradientTexture
             stops={[0, 0.5, 1]} // As many stops as you want
-            colors={["black", "white", "black"]} // Colors need to match the number of stops
+            colors={["orange", "blue", "orange"]} // Colors need to match the number of stops
             size={1024} // Size is optional, default = 1024
           />
         </meshBasicMaterial>

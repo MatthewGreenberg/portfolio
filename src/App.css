@@ -36,7 +36,7 @@ h5 {
 canvas {
   opacity: 0;
   touch-action: none;
-  animation: fade-in 2s ease 0.3s forwards;
+  animation: fade-in 2s ease 0.8s forwards;
   animation-delay: 0s;
   position: fixed;
 }

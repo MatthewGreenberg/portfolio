@@ -31,7 +31,7 @@ export default function WorkButton() {
     scaleY: isOpen ? 22 : 1,
 
     positionX: isHovered ? 0.45 : 0.6,
-    alphaText: isHovered ? 0.9 : 0.5,
+    alphaText: isHovered ? 1 : 1,
 
     rotateY: isOpen ? Math.PI / 2 : 0,
     delay: isOpen ? 250 : 0,
@@ -47,7 +47,6 @@ export default function WorkButton() {
 
   const { ballsAlpha } = useSpring({
     ballsAlpha: isHovered ? 1 : 0.3,
-    delay: isHovered ? 220 : 0,
   });
 
   // Animate gradient
@@ -72,7 +71,7 @@ export default function WorkButton() {
             fontSize={0.3}
             rotation={[-Math.PI / 2, -Math.PI / 2, Math.PI / 2]}
           >
-            <LayerMaterial ref={ref} toneMapped={false}>
+            <LayerMaterial ref={ref} toneMapped={true}>
               <Gradient
                 ref={textGradientRef}
                 end={-0.4}
@@ -92,7 +91,6 @@ export default function WorkButton() {
       >
         <pointLight intensity={10} position={[0, 0, 0]} color="pink" />
         <mesh
-          transparent={true}
           onClick={() => {
             if (isOpen) return;
             document.body.style.cursor = "auto";
@@ -112,12 +110,7 @@ export default function WorkButton() {
         >
           <boxGeometry args={[0.5, 0.4, 1]} />
           {!isOpen && <BoxMaterial />}
-          <meshBasicMaterial />
-          {isOpen && (
-            <LayerMaterial ref={ref} toneMapped={false}>
-              <Gradient end={-0.4} colorA="orange" colorB="#FFF200" />
-            </LayerMaterial>
-          )}
+          {isOpen && <meshStandardMaterial color="yellow" />}
         </mesh>
       </group>
     </>
